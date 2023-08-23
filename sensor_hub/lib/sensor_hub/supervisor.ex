@@ -5,6 +5,8 @@ defmodule SensorHub.Sup do
     Supervisor.start_link(__MODULE__, ids, name: __MODULE__)
   end
 
+  # This is wonky, what I really want here is to pass the ids in, but for the life of me I could not figure that
+  # out and I gave up and hard coded them :(
   @impl true
   def init(_ids) do
     children = [

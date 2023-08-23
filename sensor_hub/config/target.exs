@@ -90,7 +90,7 @@ config :mdns_lite,
 
 config :sensor_hub,
        :environment_tracker_url,
-       "http://10.66.69.25:4000"
+       "http://10.19.93.211:4000"
 
 # Import target specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

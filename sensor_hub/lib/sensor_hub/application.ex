@@ -12,6 +12,8 @@ defmodule SensorHub.Application do
     opts = [strategy: :one_for_one, name: SensorHub.Supervisor]
 
     children = [
+      # I really want to pass these ids in, but I could not figure that out
+      # so in the supervisor they are hard coded :(
       {SensorHub.Sup, [118, 119]},
       {Finch, name: TemperatureTrackerClient},
       {

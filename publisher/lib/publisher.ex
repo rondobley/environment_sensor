@@ -31,7 +31,6 @@ defmodule Publisher do
     for sensor <- state.sensors do
       %{id: id, process: process} = sensor
       measurement = Sensor.measure(process)
-      #data = Map.put(measurement, :sensor_id, id)
       {:ok, current_time} = DateTime.now("America/Los_Angeles")
       iso_time = DateTime.to_iso8601(current_time)
       data = Map.put(Map.put(measurement, :sensor_id, id), :time, iso_time)
